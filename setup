@@ -2,4 +2,4 @@ curl -k -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 brew Brewfile
 source ./install
-source ./init
+source ./load
