@@ -4,6 +4,6 @@ do
   if [ -f $HOME/$file ]; then
     echo "$file exists, moving to $file.pre";
     mv $HOME/$file $HOME/$file.pre
-   fi
-ln -s $HOME/.dots/dots/$file $HOME/$file;
+  fi
+  ln -s $PWD/$file $HOME/$file;
 done
