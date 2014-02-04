@@ -15,9 +15,9 @@ installcask macvim
 installcask miro-video-converter
 installcask sublime-text
 installcask the-unarchiver
-installcask ukelele
 installcask virtualbox
 installcask vlc
 installcask sourcetree
 installcask ffmpegx
 installcask phpstorm
+installcask clipmenu
