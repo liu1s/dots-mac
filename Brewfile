@@ -12,6 +12,10 @@ install findutils
 # Install Bash 4
 install bash
 
+# Install cask
+tap phinze/homebrew-cask
+install brew-cask
+
 # Install wget with IRI support
 install wget --enable-iri
 
@@ -28,6 +32,10 @@ tap josegonzalez/homebrew-php
 install php53
 install php54
 install php55
+install node
+install go
+install mongodb
+install redis
 
 # This formula didn’t work well last time I tried it:
 #install homebrew/dupes/screen
