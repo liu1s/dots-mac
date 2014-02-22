@@ -73,4 +73,4 @@ endtry
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif 
 
 " Tags
-set tags+=~/Code/php-src/tags
+set tags+=/tmp/tags
