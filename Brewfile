@@ -41,6 +41,7 @@ install redis
 #install homebrew/dupes/screen
 
 # Install other useful binaries
+install safe-rm
 install ack
 #install exiv2
 install git
