@@ -1,5 +1,20 @@
-curl -k -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+if [ -d "$HOME/.oh-my-zsh" ];then
+	echo "oh-my-zsh is install"
+	#upgrade_oh_my_zsh
+else
+	echo "install oh-my-zsh..."
+	curl -k -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+fi
+
+which brew >/dev/null
+if [ $? == "0" ];then
+	echo "brew is install"
+else 
+	echo "install brew..."
+	ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+fi
+exit
+
 brew Brewfile
 source ./install
 source ./load
