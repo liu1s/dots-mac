@@ -1,6 +1,6 @@
 [user]
-	name = hfcorriez
-	email = hfcorriez@gmail.com
+	name = maskwang
+	email = mask.wang.cn@gmail.com
 [alias]
 	st = status
 	ci = commit
@@ -11,7 +11,7 @@
 	tree = log --oneline --decorate --graph
 [core]
 	editor = /usr/bin/vim -f
-	excludesfile = "$HOME/.gitignore"
+    excludesfile = "$HOME/.gitignore"
 	quotepath = false
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"

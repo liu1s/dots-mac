@@ -13,8 +13,10 @@ else
 	echo "install brew..."
 	ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 fi
-exit
 
-brew Brewfile
+#brew Brewfile
+# Looks for "./Brewfile"
+brew bundle
+
 source ./install
 source ./load
