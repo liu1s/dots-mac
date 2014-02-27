@@ -5,6 +5,7 @@ export EDITOR="/usr/bin/env vim"
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=$HOME/Dropbox/Documents/scripts:$PATH
+export PATH=$HOME/bin:$PATH
 
 # rbenv completion
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi

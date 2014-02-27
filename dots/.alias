@@ -86,6 +86,7 @@ alias gpl="git pl"
 alias gs="git svn"
 alias ta="tig --all"
 
+alias sourcetree="open -a SourceTree"
 
 function gitinfo () {
 #!/bin/bash
