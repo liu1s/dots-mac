@@ -2,15 +2,21 @@ cd dots;
 for file in .*;
 do
   echo "--------------$file----------";
+
   if [ -f $HOME/$file ]; then
     echo "$file exists";
 
     if [ -f $HOME/$file.pre ]; then
-        echo "$file.pre exists, do nothing";
+        echo "rm $file";
+        rm $HOME/$file
     else
         echo "moving to $file.pre";
         mv $HOME/$file $HOME/$file.pre
-        ln -s $PWD/$file $HOME/$file;
-    fi
+    fi  
   fi
+    
+  echo "success"
+
+  ln -s $PWD/$file $HOME/$file;  
 done
+cd ..
