@@ -40,6 +40,10 @@ install redis
 # This formula didn’t work well last time I tried it:
 #install homebrew/dupes/screen
 
+# to manage your dotfiles
+tap thoughtbot/formulae
+install rcm
+
 # Install other useful binaries
 install safe-rm
 install ack
@@ -56,6 +60,10 @@ install tree
 install webkit2png
 #install zopfli
 install p7zip
+install ctags
+install watch
+# to change Ruby versions
+install rbenv
 
 tap homebrew/versions
 install lua52

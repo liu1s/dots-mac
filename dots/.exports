@@ -3,15 +3,18 @@ export EDITOR="/usr/bin/env vim"
 
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
+
 export PATH=/usr/local/share/npm/bin:$PATH
 export PATH=$HOME/Dropbox/Documents/scripts:$PATH
 export PATH=$HOME/bin:$PATH
+
 
 # rbenv completion
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # PHPBREW
-#source $HOME/.phpbrew/bashrc
+export PHPBREW_SET_PROMPT=1
+source $HOME/.phpbrew/bashrc
 
 # Larger bash history (allow 32³ entries; default is 500)
 export HISTSIZE=32768
