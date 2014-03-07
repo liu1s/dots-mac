@@ -6,6 +6,14 @@ else
 	curl -k -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 fi
 
+# If not Mac
+uname=`uname`
+
+if [ "Darwin" != "$uname" ];then
+    source ./load
+    exit
+fi
+
 which brew >/dev/null
 if [ $? == "0" ];then
 	echo "brew is install"
