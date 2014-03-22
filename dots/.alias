@@ -59,6 +59,8 @@ alias bu="brew update && brew upgrade"
 alias sfs="sshfs"
 alias svnrv="svn st |grep ^M |awk '{print \$2}' |xargs svn revert"
 
+# debain/ubuntu
+alias ag="sudo apt-get"
 
 # git
 alias gitcfg="vim ~/.gitconfig"
