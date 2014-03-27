@@ -6,6 +6,13 @@ else
 	curl -k -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 fi
 
+# support vim cn help
+wget http://softlayer-ams.dl.sourceforge.net/project/vimcdoc/vimcdoc/1.8.0/vimcdoc-1.8.0.tar.gz
+tar zxvf vimcdoc-1.8.0.tar.gz
+rm -rf vimcdoc-1.8.0.tar.gz
+cp -r vimcdoc-1.8.0/doc $HOME/.vim
+rm -rf vimcdoc-1.8.0
+
 # If not Mac
 uname=`uname`
 
