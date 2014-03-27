@@ -42,6 +42,8 @@ alias wget="wget --content-disposition"
 alias xs='cd `pwd -P`' # exit symbolic path
 alias path="echo $PATH |tr -s ':' '\n'"
 alias pwdp='pwd -P'
+alias ctag="ctags -f /tmp/tags -R --c++-kinds=+px --fields=+iaS --extra=+q "
+
 #List top ten largest files/directories in current directory 
 alias ducks='du -cks *|sort -rn|head -11'
 alias sshcfg="vim ~/.ssh/config"
