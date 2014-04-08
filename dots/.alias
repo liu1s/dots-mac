@@ -60,6 +60,7 @@ alias axel="axel -a"
 alias bu="brew update && brew upgrade"
 alias sfs="sshfs"
 alias svnrv="svn st |grep ^M |awk '{print \$2}' |xargs svn revert"
+alias sourcetree="open -a SourceTree"
 
 # debain/ubuntu
 alias ag="sudo apt-get"
@@ -93,45 +94,6 @@ alias gpl="git pl"
 alias gs="git svn"
 alias ta="tig --all"
 
-alias sourcetree="open -a SourceTree"
-
-function gitinfo () {
-#!/bin/bash
-
-pushd . >/dev/null
-
-# Find base of git directory
-while [ ! -d .git ] && [ ! `pwd` = "/" ]; do cd ..; done
-
-# Show various information about this git directory
-if [ -d .git ]; then
-    echo "== Remote URL: `git remote -v`"
-
-        echo "== Remote Branches: "
-        git branch -r
-        echo
-
-        echo "== Local Branches:"
-        git branch
-        echo
-
-        echo "== Configuration (.git/config)"
-        cat .git/config
-        echo
-
-        echo "== Most Recent Commit"
-        git log --max-count=1
-        echo
-
-        echo "Type 'git log' for more commits, or 'git show' for full commit details."
-else
-    echo "Not a git repository."
-        fi
-
-        popd >/dev/null
-}
-
-
 # dir travel
 # get rid of command not found
 alias cd..='cd ..'
@@ -143,53 +105,3 @@ alias .5='cd ../../../../../'
 alias .6='cd ../../../../../../'
 alias .7='cd ../../../../../../../'
 alias .8='cd ../../../../../../../../'
-
-# Inspect network activities
-function spy () {
-    lsof -i -P +c 0 +M | grep -i "$1"
-}
-
-function manp ()  {
-    man $1 -t | open -f -a Preview
-}
-
-
-# Quicker way to edit hosts
-function vih () {
-    [ -f /etc/hosts.ac ] && sudo rm /etc/hosts.ac;
-    sudo vim /etc/hosts;
-    [ -f /etc/hosts.ac ] && sudo rm /etc/hosts.ac;
-}
-
-
-# Quick way to edit & apply aliases
-function via () {
-    vim ~/.alias && source ~/.alias
-    echo "~/.alias applied"
-}
-
-
-# Quick way to edit .gitignore
-function vigi () {
-    vim .gitignore
-}
-
-function mcd () {
-    mkdir -vp "$1" && cd "$1";
-}
-
-# List files by a specified extension
-function lsext () {
-    find . -type f -iname '*.'${1}'' -exec ls -l {} \; ;
-}
-
-# who uses port
-function wup (){
-    lsof -i tcp:$1
-}
-
-
-function cpkey () {
-    pbcopy < $HOME/.ssh/id_rsa.pub;
-    echo "Your public key ~/.ssh/id_rsa.pub is now in the clipboard."
-}
