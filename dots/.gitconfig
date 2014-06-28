@@ -12,7 +12,7 @@
 [core]
     autocrlf = input
 	editor = /usr/bin/vim -f
-	excludesfile = /Users/maskwang/.gitignore_global
+	excludesfile = /Users/maskwang/.gitignore
 	quotepath = false
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
